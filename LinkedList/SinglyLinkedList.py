@@ -1,5 +1,3 @@
-
-
 class SinglyLinkedList:
     
     #Private Class Node
