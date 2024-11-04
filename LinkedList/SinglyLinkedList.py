@@ -1,3 +1,4 @@
+from typing import Optional
 class SinglyLinkedList:
     
     #Private Class Node
@@ -78,6 +79,25 @@ class SinglyLinkedList:
             curr = curr.next
         print("Not a Node")
         return None
+    
+
+    def getHead(self) -> _Node:
+        return self.head
+    def reverseList(self, Head: Optional[_Node]) -> Optional[_Node]:
+        curr = Head
+        prev = None
+        while curr:
+            temp3 = curr
+            curr = curr.next
+            temp = curr.next
+            temp2 = temp3
+            temp.next = temp2
+            
+        return curr
+             
+                 
+
+        
 
             
 
@@ -111,4 +131,7 @@ if __name__ == '__main__':
     List.prepend(99)
     List.display()
     List.insertAfter(99,69)
+    List.display()
+
+    List.reverseList(List.getHead())
     List.display()
